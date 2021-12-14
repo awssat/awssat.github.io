@@ -40,7 +40,6 @@
                             d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z" />
                     </svg>
                 </button>
-                                    <a class="w-full hidden md:block" href="https://awssat.com/opensource">Open Source</a>
                             </div>
 
         </div>
@@ -64,7 +63,7 @@ class="md:block justify-end relative z-20" >
         </a>
     </li>
 
-    <li class="ml-2  md:hidden ">
+    <li class="ml-2 ">
         <a href="https://awssat.com/opensource"
             class="base-side-menu-li flex truncate items-center py-2 pl-1 pr-3 md:pr-5 group">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -133,26 +132,68 @@ class="md:block justify-end relative z-20" >
         </div>
     </header>
     <main class="flex justify-between h-full mt-4">
-    
-<div class="flex flex-col items-center justify-center w-full opensource-doc-body md:px-4 px-12 mt-32">
-    <p class="font-black leading-loose text-2xl md:text-3xl">
-        "If <span class="shadow-link">you have</span> an idea and <span class="shadow-link">I have</span> an idea and we exchange these ideas,
-                then <span class="shadow-link">each of us</span> will have two ideas."
-    </p>
-    <p class="text-right w-full text-md text-gray-600">
-    &mdash; A wise man, (aka Bernard Shaw) 
-    </p>
-    <p class="mt-12 font-bold md:text-2xl text-xl border-t pt-4">
-    We believe that most of our open source projects are ideas that we love to share with you.
-    <p>
-    
-    <a class="mt-12 p-3 shadow-sm border base-side-menu-ul text-center rounded-sm font-bold flex items-center" href="https://github.com/awssat" target="_tab">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current mr-2" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-    </svg>
-        <span>Visit our Github page</span>
-    </a>
-</div>
+    <h1>Contact</h1>
+
+<p class="mb-8">
+???
+</p>
+
+<form action="/contact" class="mb-12">
+    <div class="flex flex-wrap mb-6 -mx-3">
+        <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
+            <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="contact-name"
+                placeholder="Jane Doe"
+                name="name"
+                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
+                required
+            >
+        </div>
+
+        <div class="w-full px-3 md:w-1/2">
+            <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="contact-email"
+                placeholder="email@domain.com"
+                name="email"
+                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
+                required
+            >
+        </div>
+    </div>
+
+    <div class="w-full mb-12">
+        <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-message">
+            Message
+        </label>
+
+        <textarea
+            id="contact-message"
+            rows="4"
+            name="message"
+            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
+            placeholder="A lovely message here."
+            required
+        ></textarea>
+    </div>
+
+    <div class="flex justify-end w-full">
+        <input
+            type="submit"
+            value="Submit"
+            class="block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
+        >
+    </div>
+</form>
 
     </main>
     

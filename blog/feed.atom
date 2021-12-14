@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Awssat</title>
+    <link href="https://awssat.com/blog" />
+    <link type="application/atom+xml" rel="self" href="https://awssat.com/blog/feed.atom" />
+    <updated>2021-12-14T00:42:45+00:00</updated>
+    <id>https://awssat.com/blog/feed.atom</id>
+    <author>
+        <name>Awssat Devs</name>
+    </author>
+                <entry>
+            <id>https://awssat.com/blog/hello-world</id>
+            <link type="text/html" rel="alternate" href="https://awssat.com/blog/hello-world" />
+            <title>Hello World</title>
+            <published>2021-12-14T00:00:00+00:00</published>
+            <updated>2021-12-14T00:00:00+00:00</updated>
+            <author>
+                <name>Awssat Devs</name>
+            </author>
+            <summary type="html">Hello, world!
+We are happy with the new design of our website. We plan to share great things on this blog, mostly about PHP and web development in general....</summary>
+            <content type="html"><![CDATA[
+                <p>Hello, world!
+We are happy with the new design of our website. We plan to share great things on this blog, mostly about PHP and web development in general.</p>
+            ]]></content>
+        </entry>
+    </feed>

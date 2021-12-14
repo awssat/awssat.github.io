@@ -4,11 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Awssat</title>
+<title>Hello World — Awssat </title>
 <link rel="stylesheet" href="https://awssat.com/assets/build/css/app.css">
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
 <link href="https://awssat.com/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Awssat Atom Feed">
+<meta property="og:title" content="Hello World">
+
+<meta property="og:image" content="https://awssat.com/assets/images/covers/.png">
+<meta property="og:image:width" content="1128">
+<meta property="og:image:height" content="600">
+
+<meta property="og:url" content="https://awssat.com/blog/hello-world">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https://awssat.com/blog/hello-world"},"headline":"Hello World","image":"https://awssat.com/assets/images/covers/.png","speakable":{"@type":"SpeakableSpecification","cssSelector":["#article-title","#article-body"]},"datePublished":"2021-12-14T00:00:00+00:00","dateModified":"2021-12-14T00:00:00+00:00","author":{"@type":"Person","name":"Awssat Devs"},"publisher":{"@type":"Organization","name":"Awssat","logo":{"@type":"ImageObject","url":"https://awssat.com/assets/images/logo.png"}}}</script>
 </head>
 <body class="mx-auto max-w-5xl px-0 md:px-4 container antialiased">
     <header x-data="{ open: false }"
@@ -40,7 +49,7 @@
                             d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z" />
                     </svg>
                 </button>
-                                    <a class="w-full hidden md:block" href="https://awssat.com/opensource">Open Source</a>
+                                    <a class="w-full hidden md:block" href="https://awssat.com/blog">Blog</a>
                             </div>
 
         </div>
@@ -51,7 +60,7 @@ class="md:block justify-end relative z-20" >
 <ul
     class="list-none shadow-sm border base-side-menu-ul rounded-sm inline-flex md:flex md:items-center absolute md:relative mt-2 mr-1 md:mr-0 md:flex-row flex-col md:justify-end w-auto md:w-full">
 
-    <li class="ml-2 ">
+    <li class="ml-2  md:hidden ">
         <a href="https://awssat.com/blog"
             class="base-side-menu-li flex items-center py-2 pl-1 pr-3 md:pr-5 group">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -64,7 +73,7 @@ class="md:block justify-end relative z-20" >
         </a>
     </li>
 
-    <li class="ml-2  md:hidden ">
+    <li class="ml-2 ">
         <a href="https://awssat.com/opensource"
             class="base-side-menu-li flex truncate items-center py-2 pl-1 pr-3 md:pr-5 group">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -133,25 +142,59 @@ class="md:block justify-end relative z-20" >
         </div>
     </header>
     <main class="flex justify-between h-full mt-4">
-    
-<div class="flex flex-col items-center justify-center w-full opensource-doc-body md:px-4 px-12 mt-32">
-    <p class="font-black leading-loose text-2xl md:text-3xl">
-        "If <span class="shadow-link">you have</span> an idea and <span class="shadow-link">I have</span> an idea and we exchange these ideas,
-                then <span class="shadow-link">each of us</span> will have two ideas."
-    </p>
-    <p class="text-right w-full text-md text-gray-600">
-    &mdash; A wise man, (aka Bernard Shaw) 
-    </p>
-    <p class="mt-12 font-bold md:text-2xl text-xl border-t pt-4">
-    We believe that most of our open source projects are ideas that we love to share with you.
-    <p>
-    
-    <a class="mt-12 p-3 shadow-sm border base-side-menu-ul text-center rounded-sm font-bold flex items-center" href="https://github.com/awssat" target="_tab">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current mr-2" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-    </svg>
-        <span>Visit our Github page</span>
-    </a>
+    <div class="w-full mx-auto max-w-5xl flex flex-col p-4 md:p-0">
+<article class="w-full flex flex-col relative pb-10 mt-10 break-normal base-post-container border-b">
+    <h1 id="article-title"
+        class="base-post-large-title text-2xl md:text-4xl lg:text-5x block font-black leading-relaxed my-5">Hello World</h1>
+
+    <aside class="flex justify-between flex-col md:flex-row text-xs mb-5">
+        <div class="flex items-center mb-2 md:mb-0 base-post-aside-date">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 base-post-aside-icon fill-current mr-1" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg>
+            Tue, Dec 14, 2021 12:00 AM
+                    </div>
+
+        <div class="flex items-center">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4  base-post-aside-icon fill-current mr-1" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
+            </svg>
+                                                <a class="mx-1 base-tag base-tag-default base-tag-no-box flex items-center px-1 py-px leading-4"
+                        href="https://awssat.com/blog/tag/general">
+                                                general
+                    </a>
+                                    </div>
+    </aside>
+
+    <section id="article-body" class="lading-9 md:leading-10 font-sans text-lg md:text-xl base-post-body">
+
+        <p>Hello, world!
+We are happy with the new design of our website. We plan to share great things on this blog, mostly about PHP and web development in general.</p>
+
+    </section>
+
+
+    <aside class="flex justify-between mt-4 text-sm">
+        <div class="flex items-center">
+            
+        </div>
+        <div>
+
+            
+            <div class="base-post-author">
+                                <span class="italic">By</span> <span class="font-bold">Awssat Devs</span>
+                            </div>
+
+        </div>
+    </aside>
+</article>
 </div>
 
     </main>
