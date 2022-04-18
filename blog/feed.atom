@@ -3,12 +3,175 @@
     <title>Awssat</title>
     <link href="https://awssat.com/blog" />
     <link type="application/atom+xml" rel="self" href="https://awssat.com/blog/feed.atom" />
-    <updated>2021-12-14T00:42:45+00:00</updated>
+    <updated>2022-04-18T03:52:11+00:00</updated>
     <id>https://awssat.com/blog/feed.atom</id>
     <author>
         <name>Awssat Devs</name>
     </author>
                 <entry>
+            <id>https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel</id>
+            <link type="text/html" rel="alternate" href="https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel" />
+            <title>How to implement translations and routes into Inertia and Laravel</title>
+            <published>2022-04-18T00:00:00+00:00</published>
+            <updated>2022-04-18T00:00:00+00:00</updated>
+            <author>
+                <name>Abdulrahman</name>
+            </author>
+            <summary type="html">InertiaJS is one of the fastest-growing JavaScript frameworks that help you make powerful, single-page apps. It comes included as one of the choices in Laravel Jetstream, a starter kit to help you build apps faster.
+
+Most developers are not keen to write......</summary>
+            <content type="html"><![CDATA[
+                <p>InertiaJS is one of the fastest-growing JavaScript frameworks that help you make powerful, single-page apps. It comes included as one of the choices in Laravel Jetstream, a starter kit to help you build apps faster.</p>
+
+<p>Most developers are not keen to write hard-coded translations and routes in their code because they're subject to changes. Unlike Blade templates, Inertia doesn't share the same flexibility as Blade templates by using Laravel helpers for routes and translations. In this post, we share our approach in Awssat that we have used in one of our apps lately.</p>
+
+<p>We assume that you have already installed Inertia (Vue 3).</p>
+
+<ol>
+<li>Create a new helper function in your functions/helpers.php file (create one if you didn't already) to fetch given translations.</li>
+</ol>
+
+<pre><code class="language-php">&lt;?php
+//...
+function getTrans($items)
+{
+    return collect($items)-&gt;mapWithKeys(function ($item) {
+        return [$item =&gt; __($item)];
+    })-&gt;all();
+}
+//...
+</code></pre>
+
+<p><br />
+2. Share global routes and translations from your HandleInertiaRequests middleware (you don't need this if you don't have translations and routes that you want to share across all your pages).</p>
+
+<pre><code class="language-php">&lt;?php
+//......
+//......
+
+class HandleInertiaRequests extends Middleware
+{
+  //.....
+  //.....
+  
+     public function share(Request $request)
+     {
+     
+          return array_merge(parent::share($request), [
+            //....
+            //.....
+            'rootTranslations' =&gt; getTrans([
+                'pages.features',
+                'pages.help',
+                'pages.privacy_and_terms',
+                'pages.contact',
+                'pages.copyright',
+                //....
+            ]),
+            'rootRoutes' =&gt; function () {
+                return [
+                    'logout' =&gt; route('logout'),
+                    'login' =&gt; route('login'),
+                    'home' =&gt; route('home'),
+                ];
+            },
+        ]);
+
+     }
+}
+</code></pre>
+
+<p><br />
+3. Add a new Javascript helpers file so that we can add some new helpers to help us fetch translations and routes easily.</p>
+
+<pre><code class="language-js">import { usePage } from "@inertiajs/inertia-vue3";
+import { computed } from "@vue/runtime-core";
+
+export function route(name, obj) {
+    const routes = computed(() =&gt; usePage().props.value.routes);
+    const rootRoutes = computed(() =&gt; usePage().props.value.rootRoutes);
+
+    let url = optional(routes.value)[name] || optional(rootRoutes.value)[name];
+    if (typeof url === undefined || !url || url === null) {
+        return name;
+    }
+
+    let params = url.matchAll(/__(\w+)\.(\w+)__/g);
+
+    for (let result of params) {
+        if (obj &amp;&amp; obj.hasOwnProperty(result[1])) {
+            url = url.replace(result[0], obj[result[1]][result[2]]);
+        }
+    }
+    return url;
+}
+
+export function optional(variable, def = {}) {
+    return typeof variable === undefined || variable === null || variable === undefined ? def : variable;
+}
+
+export function t(key, replace) {
+    const translations = computed(() =&gt; {
+        return { ...(usePage().props.value.rootTranslations || {}), ...(usePage().props.value.translations || {}) };
+    });
+
+    let translation = optional(translations.value)[key] || key;
+
+    if (replace !== null &amp;&amp; typeof replace !== "undefined") {
+        const regex = new RegExp(":(" + Object.keys(replace).join("|") + ")", "g");
+        return translation.replace(regex, (m, $1) =&gt; replace[$1] || m);
+    }
+    return translation.replace("&amp;", "&amp;");
+}
+
+export default {
+    route,
+    optional,
+    t,
+};
+</code></pre>
+
+<p><br />
+4. From any Laravel controller, return your routes and translations as you would any other information you would pass to Inertia.</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Inertia\Inertia;
+
+class AboutController extends Controller
+{
+    public function __invoke()
+    {
+        return Inertia::render('About', [
+            'routes' =&gt; [
+                'register' =&gt; route('register'),
+                'terms' =&gt; route('terms'),
+            ],
+            'translations' =&gt; getTrans([
+                'pages.about',
+                'features.title',
+                'features.body'
+            ]),
+        ]);
+    }
+}  
+</code></pre>
+
+<p><br />
+5. Then finaly, from your Vue3 component, import the new Javascript helpers and use them.</p>
+
+<pre><code class="language-js">&lt;script setup&gt;import {(route, t)} from '@/helpers.js';&lt;/script&gt;
+//html
+&lt;h4 class="font-bold my-2"&gt;{{ t('features.title') }}&lt;/h4&gt;
+&lt;inertia-link :href="route('help')"&gt;{{ t('features.help') }}&lt;inertia-link&gt;&lt;/inertia-link&gt;&lt;/inertia-link&gt;
+</code></pre>
+
+<p>Enjoy.</p>
+            ]]></content>
+        </entry>
+            <entry>
             <id>https://awssat.com/blog/hello-world</id>
             <link type="text/html" rel="alternate" href="https://awssat.com/blog/hello-world" />
             <title>Hello World</title>

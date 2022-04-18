@@ -4,11 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Blog — Awssat </title>
+<title>How to implement translations and routes into Inertia and Laravel — Awssat </title>
 <link rel="stylesheet" href="https://awssat.com/assets/build/css/app.css">
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
 <link href="https://awssat.com/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Awssat Atom Feed">
+<meta property="og:title" content="How to implement translations and routes into Inertia and Laravel">
+
+<meta property="og:image" content="https://awssat.com/assets/images/covers/how-to-implement-translations-and-routes-into-Inertia-and-Laravel.png">
+<meta property="og:image:width" content="1128">
+<meta property="og:image:height" content="600">
+
+<meta property="og:url" content="https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel">
+<meta property="og:type" content="article">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel"},"headline":"How to implement translations and routes into Inertia and Laravel","image":"https://awssat.com/assets/images/covers/how-to-implement-translations-and-routes-into-Inertia-and-Laravel.png","speakable":{"@type":"SpeakableSpecification","cssSelector":["#article-title","#article-body"]},"datePublished":"2022-04-18T00:00:00+00:00","dateModified":"2022-04-18T00:00:00+00:00","author":{"@type":"Person","name":"Abdulrahman"},"publisher":{"@type":"Organization","name":"Awssat","logo":{"@type":"ImageObject","url":"https://awssat.com/assets/images/logo.png"}}}</script>
 </head>
 <body class="mx-auto max-w-5xl px-0 md:px-4 container antialiased">
     <header x-data="{ open: false }"
@@ -133,13 +142,10 @@ class="md:block justify-end relative z-20" >
         </div>
     </header>
     <main class="flex justify-between h-full mt-4">
-    <div class="w-full mx-auto flex mt-8 p-4 md:p-0">
-    <div class="w-full x">
-        
-    <div class="w-full flex flex-col relative pb-5 mb-10 break-normal base-post-container border-b">
-
-    <h2 class="text-xl md:text-3xl mb-4 font-bold"><a href="https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel"
-            class="base-post-title">How to implement translations and routes into Inertia and Laravel</a></h2>
+    <div class="w-full mx-auto max-w-5xl flex flex-col p-4 md:p-0">
+<article class="w-full flex flex-col relative pb-10 mt-10 break-normal base-post-container border-b">
+    <h1 id="article-title"
+        class="base-post-large-title text-2xl md:text-4xl lg:text-5x block font-black leading-relaxed my-5">How to implement translations and routes into Inertia and Laravel</h1>
 
     <aside class="flex justify-between flex-col md:flex-row text-xs mb-5">
         <div class="flex items-center mb-2 md:mb-0 base-post-aside-date">
@@ -150,92 +156,205 @@ class="md:block justify-end relative z-20" >
                     d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
                 <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
             </svg>
-            <span title="Mon, Apr 18, 2022 12:00 AM">April 18, 2022</span>
+            Mon, Apr 18, 2022 12:00 AM
                     </div>
-    </aside>
-    <div class="lading-9 md:leading-10 font-sans text-lg md:text-xl base-post-body">InertiaJS is one of the fastest-growing JavaScript frameworks that help you make powerful, single-page apps. It comes included as one of the choices in Laravel Jetstream, a starter kit to help you...</div>
 
-    <div class="flex justify-between mt-4 text-sm">
-        <a href="https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel"
-             title="Read more on 'How to implement translations and routes into Inertia and Laravel'"
-            class="text-lg font-bold text-gray-800 base-post-read-more flex items-center  py-px px-1 rounded group">Read
-            More
-             &hellip;             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                class="w-5 h-5 fill-current ml-1 transition transform  duration-500 group-hover:translate-x-4">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                            </svg></a>
-</div>
-</div>
- 
-    <div class="w-full flex flex-col relative pb-5 mb-10 break-normal base-post-container border-b">
-
-    <h2 class="text-xl md:text-3xl mb-4 font-bold"><a href="https://awssat.com/blog/hello-world"
-            class="base-post-title">Hello World</a></h2>
-
-    <aside class="flex justify-between flex-col md:flex-row text-xs mb-5">
-        <div class="flex items-center mb-2 md:mb-0 base-post-aside-date">
+        <div class="flex items-center">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 base-post-aside-icon fill-current mr-1" viewBox="0 0 24 24">
+                class="w-4 h-4  base-post-aside-icon fill-current mr-1" viewBox="0 0 24 24">
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
-                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                    d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
             </svg>
-            <span title="Tue, Dec 14, 2021 12:00 AM">December 14, 2021</span>
-                    </div>
+                                                <a class="mx-1 base-tag base-tag-default base-tag-no-box flex items-center px-1 py-px leading-4"
+                        href="https://awssat.com/blog/tag/php">
+                                                php
+                    </a>
+                                    <a class="mx-1 base-tag base-tag-default base-tag-no-box flex items-center px-1 py-px leading-4"
+                        href="https://awssat.com/blog/tag/laravel">
+                                                laravel
+                    </a>
+                                    </div>
     </aside>
-    <div class="lading-9 md:leading-10 font-sans text-lg md:text-xl base-post-body">Hello, world!
-We are happy with the new design of our website. We plan to share great things on this blog, mostly about PHP and web development in general.</div>
 
-    <div class="flex justify-between mt-4 text-sm">
-        <a href="https://awssat.com/blog/hello-world"
-             title="Read more on 'Hello World'"
-            class="text-lg font-bold text-gray-800 base-post-read-more flex items-center  py-px px-1 rounded group">Read
-            More
-             &hellip;             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                class="w-5 h-5 fill-current ml-1 transition transform  duration-500 group-hover:translate-x-4">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                            </svg></a>
-</div>
-</div>
- 
+    <section id="article-body" class="lading-9 md:leading-10 font-sans text-lg md:text-xl base-post-body">
+
+        <p>InertiaJS is one of the fastest-growing JavaScript frameworks that help you make powerful, single-page apps. It comes included as one of the choices in Laravel Jetstream, a starter kit to help you build apps faster.</p>
+
+<p>Most developers are not keen to write hard-coded translations and routes in their code because they're subject to changes. Unlike Blade templates, Inertia doesn't share the same flexibility as Blade templates by using Laravel helpers for routes and translations. In this post, we share our approach in Awssat that we have used in one of our apps lately.</p>
+
+<p>We assume that you have already installed Inertia (Vue 3).</p>
+
+<ol>
+<li>Create a new helper function in your functions/helpers.php file (create one if you didn't already) to fetch given translations.</li>
+</ol>
+
+<pre><code class="language-php">&lt;?php
+//...
+function getTrans($items)
+{
+    return collect($items)-&gt;mapWithKeys(function ($item) {
+        return [$item =&gt; __($item)];
+    })-&gt;all();
+}
+//...
+</code></pre>
+
+<p><br />
+2. Share global routes and translations from your HandleInertiaRequests middleware (you don't need this if you don't have translations and routes that you want to share across all your pages).</p>
+
+<pre><code class="language-php">&lt;?php
+//......
+//......
+
+class HandleInertiaRequests extends Middleware
+{
+  //.....
+  //.....
+  
+     public function share(Request $request)
+     {
+     
+          return array_merge(parent::share($request), [
+            //....
+            //.....
+            'rootTranslations' =&gt; getTrans([
+                'pages.features',
+                'pages.help',
+                'pages.privacy_and_terms',
+                'pages.contact',
+                'pages.copyright',
+                //....
+            ]),
+            'rootRoutes' =&gt; function () {
+                return [
+                    'logout' =&gt; route('logout'),
+                    'login' =&gt; route('login'),
+                    'home' =&gt; route('home'),
+                ];
+            },
+        ]);
+
+     }
+}
+</code></pre>
+
+<p><br />
+3. Add a new Javascript helpers file so that we can add some new helpers to help us fetch translations and routes easily.</p>
+
+<pre><code class="language-js">import { usePage } from "@inertiajs/inertia-vue3";
+import { computed } from "@vue/runtime-core";
+
+export function route(name, obj) {
+    const routes = computed(() =&gt; usePage().props.value.routes);
+    const rootRoutes = computed(() =&gt; usePage().props.value.rootRoutes);
+
+    let url = optional(routes.value)[name] || optional(rootRoutes.value)[name];
+    if (typeof url === undefined || !url || url === null) {
+        return name;
+    }
+
+    let params = url.matchAll(/__(\w+)\.(\w+)__/g);
+
+    for (let result of params) {
+        if (obj &amp;&amp; obj.hasOwnProperty(result[1])) {
+            url = url.replace(result[0], obj[result[1]][result[2]]);
+        }
+    }
+    return url;
+}
+
+export function optional(variable, def = {}) {
+    return typeof variable === undefined || variable === null || variable === undefined ? def : variable;
+}
+
+export function t(key, replace) {
+    const translations = computed(() =&gt; {
+        return { ...(usePage().props.value.rootTranslations || {}), ...(usePage().props.value.translations || {}) };
+    });
+
+    let translation = optional(translations.value)[key] || key;
+
+    if (replace !== null &amp;&amp; typeof replace !== "undefined") {
+        const regex = new RegExp(":(" + Object.keys(replace).join("|") + ")", "g");
+        return translation.replace(regex, (m, $1) =&gt; replace[$1] || m);
+    }
+    return translation.replace("&amp;", "&amp;");
+}
+
+export default {
+    route,
+    optional,
+    t,
+};
+</code></pre>
+
+<p><br />
+4. From any Laravel controller, return your routes and translations as you would any other information you would pass to Inertia.</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Http\Controllers;
+
+use Inertia\Inertia;
+
+class AboutController extends Controller
+{
+    public function __invoke()
+    {
+        return Inertia::render('About', [
+            'routes' =&gt; [
+                'register' =&gt; route('register'),
+                'terms' =&gt; route('terms'),
+            ],
+            'translations' =&gt; getTrans([
+                'pages.about',
+                'features.title',
+                'features.body'
+            ]),
+        ]);
+    }
+}  
+</code></pre>
+
+<p><br />
+5. Then finaly, from your Vue3 component, import the new Javascript helpers and use them.</p>
+
+<pre><code class="language-js">&lt;script setup&gt;import {(route, t)} from '@/helpers.js';&lt;/script&gt;
+//html
+&lt;h4 class="font-bold my-2"&gt;{{ t('features.title') }}&lt;/h4&gt;
+&lt;inertia-link :href="route('help')"&gt;{{ t('features.help') }}&lt;inertia-link&gt;&lt;/inertia-link&gt;&lt;/inertia-link&gt;
+</code></pre>
+
+<p>Enjoy.</p>
+
+    </section>
 
 
+    <aside class="flex justify-between mt-4 text-sm">
+        <div class="flex items-center">
+            
 
+        </div>
+    
+
+            
+            <div class="base-post-author">
+                                <span class="italic">By</span> <a href="http://twitter.com/aphpdev" class="font-bold"
+                        target="_tab" rel="nofollow" title="external page of Abdulrahman">Abdulrahman</a>
+                            </div>
+
+            
+
+
+      
+    </aside>
+
+    <hr>
+    <div class="text-center py-4">
+    <a target="_tab" rel="nofollow" class="font-bold text-sm text-gray-700" href="https://github.com/awssat/website/tree/master/source/_posts/how-to-implement-translations-and-routes-into-Inertia-and-Laravel.md">Improve this post on Github</a>
     </div>
-    <div class="w-1/5 hidden lg:block pl-4 border-l base-left-side-container ml-4">
-        <nav role="navigation" class="w-full base-left-side-nav p-3 rounded">
-            <div class="text-center font-bold base-left-side-nav-title rounded mb-2">Tags</div>
-                        <a href="https://awssat.com/blog/tag/general" title="all posts under General"
-                class="flex items-center justify-start hover:underline pb-1 ">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0  24 24"
-                    class="w-4 h-4 fill-current mr-1">
-                                        <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
-                                    </svg>General</a>
-                        <a href="https://awssat.com/blog/tag/laravel" title="all posts under Laravel"
-                class="flex items-center justify-start hover:underline pb-1 ">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0  24 24"
-                    class="w-4 h-4 fill-current mr-1">
-                                        <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
-                                    </svg>Laravel</a>
-                        <a href="https://awssat.com/blog/tag/php" title="all posts under Php"
-                class="flex items-center justify-start hover:underline pb-1 ">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0  24 24"
-                    class="w-4 h-4 fill-current mr-1">
-                                        <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z" />
-                                    </svg>Php</a>
-                    </nav>
-
-        
-    </div>
+</article>
 </div>
 
     </main>
