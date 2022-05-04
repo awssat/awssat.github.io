@@ -3,7 +3,7 @@
     <title>Awssat</title>
     <link href="https://awssat.com/blog" />
     <link type="application/atom+xml" rel="self" href="https://awssat.com/blog/feed.atom" />
-    <updated>2022-05-04T03:37:18+00:00</updated>
+    <updated>2022-05-04T05:27:33+00:00</updated>
     <id>https://awssat.com/blog/feed.atom</id>
     <author>
         <name>Awssat Devs</name>
@@ -23,7 +23,7 @@ Unfortunately, switching between different locales was not taken into account, a
             <content type="html"><![CDATA[
                 <p>Laravel 8 introduced new model factories that are basically the same as before, but they are class-based and have some new additions.
 <br>
-Unfortunately, switching between different locales was not taken into account, and you have to define one locale in <code>config/app.php</code> using <code>faker_locale' every time you decide to test your app. &lt;br&gt; It would be great if the upcoming versions of Laravel included functions that run before making/creating models, next to</code>afterMaking<code>and</code>afterCreating`, or even better they could add something similar to Sequences but for switching between multiple locales.
+Unfortunately, switching between different locales was not taken into account, and you have to define one locale in <code>config/app.php</code> using <code>faker_locale</code> every time you decide to test your app. <br> It would be great if the upcoming versions of Laravel included functions that run before making/creating models, next to <code>afterMaking</code>and<code>afterCreating</code>, or even better they could add something similar to Sequences but for switching between multiple locales.
 <br>
 Lately, I came across this dilemma, and I had to improvise; I'm still not happy with it, but it works and is the only solution we have right now.</p>
 
