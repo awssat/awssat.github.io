@@ -3,12 +3,53 @@
     <title>Awssat</title>
     <link href="https://awssat.com/blog" />
     <link type="application/atom+xml" rel="self" href="https://awssat.com/blog/feed.atom" />
-    <updated>2022-04-18T16:15:29+00:00</updated>
+    <updated>2022-05-04T03:37:18+00:00</updated>
     <id>https://awssat.com/blog/feed.atom</id>
     <author>
         <name>Awssat Devs</name>
     </author>
                 <entry>
+            <id>https://awssat.com/blog/How-to-make-faker-uses-multiple-locales-with-Laravel-model-factories</id>
+            <link type="text/html" rel="alternate" href="https://awssat.com/blog/How-to-make-faker-uses-multiple-locales-with-Laravel-model-factories" />
+            <title>How to make faker uses multiple locales with Laravel model factories</title>
+            <published>2022-05-04T00:00:00+00:00</published>
+            <updated>2022-05-04T00:00:00+00:00</updated>
+            <author>
+                <name>Abdulrahman</name>
+            </author>
+            <summary type="html">Laravel 8 introduced new model factories that are basically the same as before, but they are class-based and have some new additions.
+
+Unfortunately, switching between different locales was not taken into account, and you have to define one locale in......</summary>
+            <content type="html"><![CDATA[
+                <p>Laravel 8 introduced new model factories that are basically the same as before, but they are class-based and have some new additions.
+<br>
+Unfortunately, switching between different locales was not taken into account, and you have to define one locale in <code>config/app.php</code> using <code>faker_locale' every time you decide to test your app. &lt;br&gt; It would be great if the upcoming versions of Laravel included functions that run before making/creating models, next to</code>afterMaking<code>and</code>afterCreating`, or even better they could add something similar to Sequences but for switching between multiple locales.
+<br>
+Lately, I came across this dilemma, and I had to improvise; I'm still not happy with it, but it works and is the only solution we have right now.</p>
+
+<pre><code>class DummyFactory extends Factory
+{
+  private $lang;
+
+  public function definition()
+  {
+      $this-&gt;lang = ($langs = ['ar', 'en'])[array_rand($langs)];
+      $this-&gt;faker = \Faker\Factory::create($this-&gt;lang == 'ar' ? 'ar_SA' : 'en_US');
+
+      return [
+            'language' =&gt; $this-&gt;lang,
+            'title' =&gt; $this-&gt;faker-&gt;realTextBetween(40, 70),
+            'content' =&gt; $this-&gt;faker-&gt;realTextBetween(500, 750),
+          ];
+   }
+}
+</code></pre>
+
+<p><b>
+And voilà, it works for now.</p>
+            ]]></content>
+        </entry>
+            <entry>
             <id>https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel</id>
             <link type="text/html" rel="alternate" href="https://awssat.com/blog/how-to-implement-translations-and-routes-into-Inertia-and-Laravel" />
             <title>How to implement translations and routes into Inertia and Laravel</title>
