@@ -183,23 +183,29 @@ class="md:block justify-end relative z-20" >
 
     <section id="article-body" class="lading-9 md:leading-10 font-sans text-lg md:text-xl base-post-body">
 
-        <p>Laravel 8 introduced new model factories that are basically the same as before, but they are class-based and have some new additions.
-<br>
-Unfortunately, switching between different locales was not taken into account, and you have to define one locale in <code>config/app.php</code> using <code>faker_locale</code> every time you decide to test your app. <br> It would be great if the upcoming versions of Laravel included functions that run before making/creating models, next to <code>afterMaking</code>and<code>afterCreating</code>, or even better they could add something similar to Sequences but for switching between multiple locales.
-<br>
-Lately, I came across this dilemma, and I had to improvise; I'm still not happy with it, but it works and is the only solution we have right now.</p>
+        <p>Laravel 8 introduced new model factories that are basically the same as before, but they are class-based and have some new additions.</p>
+
+<p><br></p>
+
+<p>Unfortunately, switching between different locales was not taken into account, and you have to define one locale in <code>config/app.php</code> using <code>faker_locale</code> every time you decide to test your app.</p>
+
+<p><br></p>
+
+<p>It would be great if the upcoming versions of Laravel included functions that run before making/creating models, next to <code>afterMaking</code>and<code>afterCreating</code>, or even better they could add something similar to Sequences but for switching between multiple locales.</p>
+
+<p><br></p>
+
+<p>Lately, I came across this dilemma, and I had to improvise; I'm still not happy with it, but it works and is the only solution we have right now.</p>
 
 <pre><code>class DummyFactory extends Factory
 {
-  private $lang;
-
   public function definition()
   {
-      $this-&gt;lang = ($langs = ['ar', 'en'])[array_rand($langs)];
-      $this-&gt;faker = \Faker\Factory::create($this-&gt;lang == 'ar' ? 'ar_SA' : 'en_US');
+      $lang = ($langs = ['ar', 'en'])[array_rand($langs)];
+      $this-&gt;faker = \Faker\Factory::create($lang == 'ar' ? 'ar_SA' : 'en_US');
 
       return [
-            'language' =&gt; $this-&gt;lang,
+            'language' =&gt; $lang,
             'title' =&gt; $this-&gt;faker-&gt;realTextBetween(40, 70),
             'content' =&gt; $this-&gt;faker-&gt;realTextBetween(500, 750),
           ];
@@ -207,8 +213,9 @@ Lately, I came across this dilemma, and I had to improvise; I'm still not happy 
 }
 </code></pre>
 
-<p><b>
-And voilà, it works for now.</p>
+<p><br></p>
+
+<p>And voilà, it works for now.</p>
 
     </section>
 
