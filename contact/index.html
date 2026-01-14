@@ -45,8 +45,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/build/assets/app-jjvYFZP_.css">
-<script defer type="module" src="/assets/build/assets/app-CQGOt5j6.js"></script>
+<link rel="stylesheet" href="/assets/build/assets/app-Czlud5oY.css">
+<script type="module" src="/assets/build/assets/app-CSIGZN4K.js"></script>
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
 <link href="https://awssat.com/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Awssat Atom Feed">
@@ -172,14 +172,17 @@
                     <div class="flex flex-col space-y-1">
                         
                         <a href="https://awssat.com/portfolio"
+                           @click="mobileMenuOpen = false"
                            class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ">
                             Portfolio
                         </a>
                         <a href="https://awssat.com/blog"
+                           @click="mobileMenuOpen = false"
                            class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ">
                             Blog
                         </a>
                         <a href="https://github.com/awssat" target="_blank" rel="noopener noreferrer"
+                           @click="mobileMenuOpen = false"
                            class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors inline-flex items-center">
                             GitHub
                             <svg class="w-5 h-5 ml-1.5" fill="currentColor" viewBox="0 0 24 24">
