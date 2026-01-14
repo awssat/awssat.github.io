@@ -5,10 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <script>document.documentElement.classList.remove('no-js')</script>
+<meta name="author" content="Awssat Devs">
+<meta name="google" content="notranslate">
+<meta name="robots" content="index, follow">
+<meta name="applicable-device" content="pc, mobile">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Awssat">
+<meta name="theme-color" content="#8b5cf6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+
+
+    <meta name="description" content="An enthusiastic team that&#039;s eager to build and design beautiful web stuff.">
+<link rel="canonical" href="https://awssat.com/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Awssat">
+<meta property="og:url" content="https://awssat.com/">
+<meta property="og:title" content="Awssat">
+<meta property="og:description" content="An enthusiastic team that&#039;s eager to build and design beautiful web stuff.">
+<meta property="og:image" content="https://awssat.com/assets/images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Awssat">
+<meta property="og:locale" content="en_US">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@awssat">
+<meta name="twitter:creator" content="@awssat">
+<meta name="twitter:title" content="Awssat">
+<meta name="twitter:description" content="An enthusiastic team that&#039;s eager to build and design beautiful web stuff.">
+<meta name="twitter:image" content="https://awssat.com/assets/images/og-default.jpg">
+<meta name="twitter:image:alt" content="Awssat">
+
 <title>Awssat - Expert Laravel Development &amp; Open Source</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/build/assets/app-R_GU5fC8.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/build/assets/app-jjvYFZP_.css">
 <script defer type="module" src="/assets/build/assets/app-DzdldW0H.js"></script>
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
@@ -18,23 +60,23 @@
 </head>
 <body class="antialiased bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
     
-    <header x-data="{ mobileMenuOpen: false, scrolled: false }" 
+    <header x-data="{ mobileMenuOpen: false, scrolled: false }"
             @scroll.window="scrolled = (window.pageYOffset > 20)"
-            class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-500"
-             :class="{ 'px-0 sm:px-0 lg:px-0': scrolled }">
-            <div class="relative mx-auto transition-all duration-500 ease-in-out border border-transparent"
-                 :class="{ 
-                    'bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl shadow-lg rounded-2xl max-w-5xl px-6 py-2 border-white/20 dark:border-gray-700/50': scrolled, 
-                    'bg-transparent max-w-7xl px-0 py-2': !scrolled 
+            @click.away="mobileMenuOpen = false"
+            class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out py-3 md:py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 transition-all duration-500"
+             :class="{ 'md:px-4 lg:px-6': scrolled }">
+            <div class="relative mx-auto transition-all duration-500 ease-in-out bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md rounded-2xl max-w-6xl px-4 sm:px-6 py-2 border border-white/10 dark:border-gray-800/50 md:bg-transparent md:backdrop-blur-none md:shadow-none md:border-transparent"
+                 :class="{
+                    '!bg-white/90 dark:!bg-gray-900/90 !backdrop-blur-xl !shadow-lg !max-w-5xl !px-6 !border-white/20 dark:!border-gray-700/50': scrolled
                  }">
-                <div class="flex justify-between items-center h-12 transition-all duration-300">
+                <div class="flex justify-between items-center h-10 sm:h-12 transition-all duration-300">
                     
                     <div class="flex items-center">
                         <a href="https://awssat.com" class="flex items-center space-x-2 group">
-                            <img src="https://awssat.com/assets/images/logo.png" class="w-8 h-8 transition-transform duration-500 group-hover:rotate-12" alt="Awssat" aria-roledescription="Logo of Awssat">
-                            <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-                                  :class="{ 'text-lg': scrolled }">Awssat</span>
+                            <img src="https://awssat.com/assets/images/logo.png" class="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-500 group-hover:rotate-12" alt="Awssat" aria-roledescription="Logo of Awssat">
+                            <span class="text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+                                  :class="{ 'text-base sm:text-lg': scrolled }">Awssat</span>
                         </a>
                     </div>
 
@@ -130,24 +172,35 @@
                      x-transition:leave="transition ease-in duration-150"
                      x-transition:leave-start="opacity-100 scale-100"
                      x-transition:leave-end="opacity-0 scale-95"
-                     class="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
-                    <div class="flex flex-col space-y-3">
-                        <a href="https://awssat.com/portfolio" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 ">
+                     class="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+                    <div class="flex flex-col space-y-1">
+                        
+                        <a href="https://awssat.com/portfolio"
+                           class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ">
                             Portfolio
                         </a>
-                        <a href="https://awssat.com/blog" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 ">
+                        <a href="https://awssat.com/blog"
+                           class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ">
                             Blog
                         </a>
-                        <a href="https://github.com/awssat" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 inline-flex items-center">
+                        <a href="https://github.com/awssat" target="_blank" rel="noopener noreferrer"
+                           class="px-4 py-3 rounded-xl text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors inline-flex items-center">
                             GitHub
-                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 ml-1.5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
 
                         
-                        <div class="px-3 py-2 flex items-center justify-center">
-                            <button @click="darkMode = !darkMode" 
+                        <div class="h-px bg-gray-200 dark:bg-gray-800 my-2"></div>
+
+                        
+                        <div class="px-4 py-2">
+                            <div class="flex items-center justify-between gap-4">
+                                
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</span>
+                                    <button @click="darkMode = !darkMode" 
         type="button" 
         class="relative p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
         :title="darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
@@ -176,11 +229,12 @@
          xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
     </svg>
-</button>                        </div>
+</button>                                </div>
 
-                        
-                        <div class="px-3 py-2">
-                            <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+                                
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language</span>
+                                    <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
     <a href="https://awssat.com/"
        class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm"
        title="English">
@@ -192,6 +246,8 @@
         عر
     </a>
 </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,18 +259,18 @@
         <main class="flex-1 ">
         <div class="w-full overflow-hidden bg-gray-50 dark:bg-gray-950 transition-colors duration-500">
     
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden gradient-mesh -mt-20 pt-20"
+    <section class="relative min-h-[calc(100vh-5rem)] sm:min-h-screen flex items-center justify-center overflow-x-hidden gradient-mesh -mt-20 pt-20"
              x-data="{ x: 0, y: 0 }"
              @mousemove="x = $event.clientX; y = $event.clientY">
+
         
-        
-        <div class="absolute inset-0 pointer-events-none z-0" 
+        <div class="absolute inset-0 pointer-events-none z-0 hidden sm:block"
              :style="`background: radial-gradient(circle 800px at ${x}px ${y}px, rgba(139, 92, 246, 0.15), transparent 70%);`">
         </div>
 
         
         <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none select-none z-0">
-            <svg class="w-[600px] h-[600px] md:w-[900px] md:h-[900px] opacity-10 dark:opacity-5 animate-float-gentle" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-[280px] h-[280px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[900px] lg:h-[900px] opacity-10 dark:opacity-5 animate-float-gentle" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color: #8b5cf6" />   
@@ -237,52 +293,52 @@
         </div>
 
         
-        <div class="relative z-10 text-center max-w-7xl mx-auto px-4 py-24 sm:py-32">
+        <div class="relative z-10 text-center w-full max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-28">
             
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-gray-900/50 backdrop-blur-xl border border-primary-100 dark:border-primary-900/30 shadow-lg shadow-primary-500/10 mb-8 animate-on-scroll hover:scale-105 transition-transform duration-300 ring-1 ring-white/20">
+            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/50 dark:bg-gray-900/50 backdrop-blur-xl border border-primary-100 dark:border-primary-900/30 shadow-lg shadow-primary-500/10 mb-5 sm:mb-6 md:mb-8 animate-on-scroll hover:scale-105 transition-transform duration-300 ring-1 ring-white/20">
                 <span class="flex h-2 w-2 relative">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span class="text-sm font-semibold text-gray-600 dark:text-gray-300 tracking-wide">Available for new projects</span>
+                <span class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300 tracking-wide">Available for new projects</span>
             </div>
 
             
-            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-on-scroll delay-100 tracking-tight text-balance drop-shadow-2xl">
-                <span class="block text-gray-900 dark:text-white">We Build</span>
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-indigo-500 to-accent-500 animate-gradient-x pb-2 filter brightness-110">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-8 leading-tight animate-on-scroll delay-100 tracking-tight text-balance drop-shadow-2xl">
+                <span class="block text-gray-900 dark:text-white mb-1 sm:mb-2">We Build</span>
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-indigo-500 to-accent-500 animate-gradient-x pb-1 md:pb-2 filter brightness-110 mb-1 sm:mb-2">
                     Exceptional Web
                 </span>
                 <span class="block text-gray-900 dark:text-white">Experiences</span>
             </h1>
 
             
-            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 animate-on-scroll delay-200 leading-relaxed text-balance font-medium">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 animate-on-scroll delay-200 leading-relaxed text-balance font-medium">
                                     Elite Laravel engineering. We craft robust, scalable applications with <span class="font-bold text-primary-600 dark:text-primary-400 border-b-2 border-primary-500/20">6 merged PRs</span> to the framework core and <span class="font-bold text-accent-600 dark:text-accent-400 border-b-2 border-accent-500/20">2,200+ stars</span> on GitHub.
                             </p>
 
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-on-scroll delay-300">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-stretch sm:items-center animate-on-scroll delay-300 max-w-lg mx-auto">
                 <a href="https://awssat.com/portfolio"
-                   class="group relative px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold text-lg shadow-2xl hover:shadow-primary-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ring-4 ring-gray-900/5 dark:ring-white/5">
+                   class="group relative px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-2xl hover:shadow-primary-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden ring-4 ring-gray-900/5 dark:ring-white/5 text-center whitespace-nowrap">
                     <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-                    <span class="relative flex items-center">
+                    <span class="relative flex items-center justify-center gap-2">
                         View Our Work
-                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </span>
                 </a>
                 <a href="#contact"
-                   class="px-8 py-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center hover:-translate-y-1">
+                   class="px-5 sm:px-6 md:px-7 py-3 sm:py-3.5 md:py-4 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 rounded-full font-bold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center hover:-translate-y-1 text-center whitespace-nowrap">
                     Let&#039;s Talk
                 </a>
             </div>
 
             
-            <div class="mt-24 w-full overflow-hidden animate-on-scroll delay-500 opacity-60 hover:opacity-100 transition-all duration-500 mask-border-fade">
+            <div class="mt-10 sm:mt-14 md:mt-20 w-full overflow-hidden animate-on-scroll delay-500 opacity-60 hover:opacity-100 transition-all duration-500 mask-border-fade -mx-4 sm:mx-0">
                 <div class="inline-flex w-max animate-marquee-smooth ">
-                    <div class="flex gap-16 px-8 py-4 text-gray-400 dark:text-gray-500 tracking-wide">
+                    <div class="flex gap-6 sm:gap-8 md:gap-12 px-4 sm:px-6 py-2 sm:py-3 text-gray-400 dark:text-gray-500 tracking-wide text-xs sm:text-sm md:text-base whitespace-nowrap">
                         <div class="flex items-center gap-3">
     <svg class="w-10 h-10" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M41 9.88889L33 5.44444L25 9.88889M41 9.88889L33 14.3333M41 9.88889V18.7778L33 23.2222M25 9.88889V18.7778M25 9.88889L33 14.3333M25 18.7778L33 23.2222M25 18.7778L9 27.6667M33 23.2222V32.1111L17 41M33 23.2222V14.3333M33 23.2222L17 32.1111M9 27.6667L17 32.1111M9 27.6667V9.88889M1 5.44444L9 1L17 5.44444M1 5.44444V32.1111L17 41M1 5.44444L9 9.88889M17 41V32.1111M9 9.88889L17 5.44444M17 5.44444V23.2222" stroke="currentColor" stroke-width="1.5" opacity="0.85"/>
@@ -476,7 +532,7 @@
     <span class="font-bold text-lg">PostgreSQL</span>
 </div>
                     </div>
-                    <div class="flex gap-16 px-8 py-4 text-gray-400 dark:text-gray-500 tracking-wide" aria-hidden="true">
+                    <div class="flex gap-6 sm:gap-8 md:gap-12 px-4 sm:px-6 py-2 sm:py-3 text-gray-400 dark:text-gray-500 tracking-wide text-xs sm:text-sm md:text-base whitespace-nowrap" aria-hidden="true">
                         <div class="flex items-center gap-3">
     <svg class="w-10 h-10" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M41 9.88889L33 5.44444L25 9.88889M41 9.88889L33 14.3333M41 9.88889V18.7778L33 23.2222M25 9.88889V18.7778M25 9.88889L33 14.3333M25 18.7778L33 23.2222M25 18.7778L9 27.6667M33 23.2222V32.1111L17 41M33 23.2222V14.3333M33 23.2222L17 32.1111M9 27.6667L17 32.1111M9 27.6667V9.88889M1 5.44444L9 1L17 5.44444M1 5.44444V32.1111L17 41M1 5.44444L9 9.88889M17 41V32.1111M9 9.88889L17 5.44444M17 5.44444V23.2222" stroke="currentColor" stroke-width="1.5" opacity="0.85"/>
@@ -676,18 +732,18 @@
     </section>
 
     
-    <section class="py-24 px-4 bg-white/50 dark:bg-gray-900/50 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-800/50">
+    <section class="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 bg-white/50 dark:bg-gray-900/50 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-800/50">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 animate-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
+            <div class="text-center mb-12 md:mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 tracking-tight px-4">
                     Why Choose Awssat?
                 </h2>
-                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-balance">
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-balance px-4">
                     We don&#039;t just write code—we contribute to the tools millions of developers use every day.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:grid-rows-[repeat(2,minmax(300px,auto))]" x-data>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 auto-rows-auto md:grid-rows-[repeat(2,minmax(300px,auto))]" x-data>
                 
                 <div class="md:col-span-2 group relative bg-white dark:bg-gray-900 rounded-3xl p-8 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-800 animate-on-scroll"
                      @mousemove="$el.style.setProperty('--x', $event.clientX - $el.getBoundingClientRect().left); $el.style.setProperty('--y', $event.clientY - $el.getBoundingClientRect().top)">
