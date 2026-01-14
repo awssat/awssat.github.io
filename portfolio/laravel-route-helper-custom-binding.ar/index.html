@@ -51,7 +51,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/build/assets/app-jjvYFZP_.css">
-<script defer type="module" src="/assets/build/assets/app-DzdldW0H.js"></script>
+<script defer type="module" src="/assets/build/assets/app-CQGOt5j6.js"></script>
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
 <link href="https://awssat.com/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Awssat Atom Feed">
@@ -170,7 +170,8 @@
                      x-transition:leave="transition ease-in duration-150"
                      x-transition:leave-start="opacity-100 scale-100"
                      x-transition:leave-end="opacity-0 scale-95"
-                     class="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+                     @click.stop
+                     class="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800 relative z-50">
                     <div class="flex flex-col space-y-1">
                         
                         <a href="https://awssat.com/ar/portfolio"
@@ -196,8 +197,7 @@
                         <div class="px-4 py-2">
                             <div class="flex items-center justify-between gap-4">
                                 
-                                <div class="flex items-center gap-2">
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Theme</span>
+                                <div class="flex items-center">
                                     <button @click="darkMode = !darkMode" 
         type="button" 
         class="relative p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
@@ -230,8 +230,7 @@
 </button>                                </div>
 
                                 
-                                <div class="flex items-center gap-2">
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Language</span>
+                                <div class="flex items-center">
                                     <div class="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
     <a href="https://awssat.com/portfolio/laravel-route-helper-custom-binding.ar"
        class="px-3 py-1.5 rounded-md text-sm font-medium transition-colors text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
