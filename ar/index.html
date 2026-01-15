@@ -59,8 +59,8 @@
 <noscript>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </noscript>
-<link rel="stylesheet" href="/assets/build/assets/app-BOyVgBWO.css">
-<script type="module" src="/assets/build/assets/app-4nk0P9yu.js"></script>
+<link rel="stylesheet" href="/assets/build/assets/app-DtnOVy5i.css">
+<script type="module" src="/assets/build/assets/app-B2_aqn4q.js"></script>
 <link rel="home" href="https://awssat.com">
 <link rel="icon" href="https://awssat.com/favicon.ico">
 <link href="https://awssat.com/blog/feed.atom" type="application/atom+xml" rel="alternate" title="Awssat Atom Feed">
@@ -76,7 +76,7 @@
 
     
     <header x-data="{ mobileMenuOpen: false, scrolled: false }"
-            @scroll.window="scrolled = (window.pageYOffset > 20)"
+            @scroll.window.throttle.150ms="scrolled = (window.pageYOffset > 20)"
             @click.away="mobileMenuOpen = false"
             class="fixed top-0 w-full z-50 py-3 md:py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-6 lg:px-8 transition-[padding] duration-300"
@@ -280,11 +280,9 @@
 
     
         <main id="main-content" class="flex-1 ">
-        <div class="w-full overflow-hidden bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition-theme" x-data="{ scrollY: 0 }" @scroll.window="scrollY = window.scrollY">
+        <div class="w-full overflow-hidden bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition-theme">
 
-<section class="relative min-h-[calc(100vh-5rem)] sm:min-h-screen flex items-center justify-center overflow-x-hidden gradient-mesh overflow-hidden pt-20"
-         x-data="{ x: 0, y: 0 }"
-         @mousemove="x = $event.clientX; y = $event.clientY">
+<section class="relative min-h-[calc(100vh-5rem)] sm:min-h-screen flex items-center justify-center overflow-x-hidden gradient-mesh overflow-hidden pt-20">
 
 
 
@@ -300,9 +298,8 @@
         <div class="absolute inset-0 bg-gray-50 dark:bg-[#030712]"></div>
 
         
-        <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-purple-500/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
-        <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-500/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[-20%] left-[20%] w-[600px] h-[600px] rounded-full bg-blue-500/20 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-4000"></div>
+        <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-purple-500/20 blur-[60px] mix-blend-multiply dark:mix-blend-screen animate-blob motion-reduce:animate-none motion-reduce:opacity-30"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-500/20 blur-[60px] mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000 motion-reduce:animate-none motion-reduce:opacity-30"></div>
 
 
         <div class="absolute inset-0" style="background-image: radial-gradient(rgba(120, 119, 198, 0.3) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1;"></div>
@@ -317,15 +314,15 @@
                     <stop offset="50%" style="stop-color: #3b82f6" />   
                     <stop offset="100%" style="stop-color: #06b6d4" />  
                 </linearGradient>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+                    <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
                     <feMerge>
                         <feMergeNode in="coloredBlur"/>
                         <feMergeNode in="SourceGraphic"/>
                     </feMerge>
                 </filter>
             </defs>
-            <g filter="url(#glow)">
+            <g filter="url(#glow)" style="will-change: auto;">
                 <path d="M29.855 0.001A30 30 0 0 0 0 30.001a30 30 0 0 0 29.855 30 30 30 0 0 0 30.145-30A30 30 0 0 0 29.855 0.001zm0.24 7.42a22.58 22.58 0 0 1 22.485 22.58 22.58 22.58 0 0 1-45.158 0 22.58 22.58 0 0 1 22.673-22.58z" fill="url(#heroGradient)"/>
                 <path d="M29.835 11.906a18.1 18.1 0 0 0-17.932 18.096 18.1 18.1 0 0 0 36.194 0 18.1 18.1 0 0 0-18.262-18.096zm-0.014 7.553a10.54 10.54 0 0 1 10.725 10.543 10.54 10.54 0 0 1-21.09 0 10.54 10.54 0 0 1 10.365-10.543z" fill="url(#heroGradient)"/>
             </g>
@@ -782,7 +779,7 @@
     
     <section class="py-32 px-4 relative z-10 bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-800/50">
         <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-24">
+            <div class="text-center mb-24 animate-on-scroll">
                 <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                     نحن لا نستخدم الأدوات فقط.<br>
                     <span class="text-primary-600 dark:text-primary-400">نحن نبنيها.</span>
@@ -795,7 +792,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,auto)]">
 
                 
-                <div class="md:col-span-2 group relative bg-gray-50 dark:bg-gray-800 rounded-[2rem] p-8 md:p-12 overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-500 hover:shadow-2xl hover:border-primary-500/30">
+                <div class="md:col-span-2 group relative bg-gray-50 dark:bg-gray-800 rounded-[2rem] p-8 md:p-12 overflow-hidden border border-gray-200 dark:border-gray-700 transition-all duration-500 hover:shadow-2xl hover:border-primary-500/30 animate-on-scroll" data-animation="slide-right">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-primary-500/10 rounded-full blur-[80px] -mr-16 -mt-16 transition-all group-hover:bg-primary-500/20"></div>
 
                     <div class="relative z-10 h-full flex flex-col justify-between">
@@ -832,7 +829,7 @@
                 </div>
 
                 
-                <div class="group relative bg-gray-900 text-white rounded-[2rem] p-8 md:p-12 overflow-hidden shadow-2xl flex flex-col justify-between">
+                <div class="group relative bg-gray-900 text-white rounded-[2rem] p-8 md:p-12 overflow-hidden shadow-2xl flex flex-col justify-between animate-on-scroll delay-100" data-animation="scale">
                     <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black"></div>
                     <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4zKSIvPjwvc3ZnPg==')]"></div>
 
@@ -860,7 +857,7 @@
                 </div>
 
                 
-                <div class="md:col-span-3 group relative bg-black rounded-[2rem] p-8 md:p-12 overflow-hidden border border-gray-800">
+                <div class="md:col-span-3 group relative bg-black rounded-[2rem] p-8 md:p-12 overflow-hidden border border-gray-800 animate-on-scroll delay-200" data-animation="fade">
                     
                     <div class="absolute inset-0 bg-gradient-to-r from-red-900/10 via-gray-900 to-emerald-900/10"></div>
 
@@ -983,7 +980,7 @@
 
                 
 
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group animate-on-scroll">
 
                     <div class="w-full md:w-1/2 order-2 md:order-1">
 
@@ -1546,7 +1543,7 @@
 
                 
 
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group animate-on-scroll">
 
                     <div class="w-full md:w-1/2 order-1">
 
@@ -1679,7 +1676,7 @@
 
                 
 
-                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group">
+                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 group animate-on-scroll">
 
                     <div class="w-full md:w-1/2 order-2 md:order-1">
 
@@ -1874,7 +1871,7 @@
             <div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-accent-600/20 blur-[100px] animate-float-gentle" style="animation-delay: 2s;"></div>
         </div>
 
-        <div class="container mx-auto max-w-4xl relative z-10">
+        <div class="container mx-auto max-w-4xl relative z-10 animate-on-scroll">
             <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tight">
                 جاهز لتوسيع رؤيتك؟
             </h2>
@@ -2035,5 +2032,111 @@
         </div>
     </div>
 </footer>
+
+    
+    <div x-data="scrollControls()"
+     @scroll.window.throttle.150ms="updateScrollPosition()"
+     x-init="updateScrollPosition()"
+     class="scroll-controls">
+
+    
+    <button x-show="showButton"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 translate-y-2"
+            @click="handleScroll()"
+            class="fixed bottom-6 left-6 z-40 p-2 transition-all duration-200 group focus:outline-none"
+            :aria-label="scrollDirection === 'up' ? 'العودة للأعلى' : 'الذهاب للأسفل'">
+        
+        <svg x-show="scrollDirection === 'up'"
+             class="w-8 h-8 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transform group-hover:-translate-y-1 transition-all duration-200 drop-shadow-md"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path>
+        </svg>
+        
+        <svg x-show="scrollDirection === 'down'"
+             class="w-8 h-8 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transform group-hover:translate-y-1 transition-all duration-200 drop-shadow-md"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+
+    
+    <div x-show="scrollProgress > 5"
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         class="fixed top-0 left-0 w-full h-0.5 z-50 pointer-events-none">
+        <div class="h-full bg-gradient-to-r from-primary-500 via-purple-500 to-accent-500 transition-all duration-150 ease-out"
+             :style="`width: ${scrollProgress}%`"></div>
+    </div>
+</div>
+
+<script>
+function scrollControls() {
+    return {
+        showButton: false,
+        scrollDirection: 'down', // 'up' or 'down'
+        scrollProgress: 0,
+        lastScrollTop: 0,
+
+        updateScrollPosition() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight;
+            const maxScroll = scrollHeight - clientHeight;
+
+            // Calculate scroll progress percentage
+            this.scrollProgress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
+
+            // Determine scroll direction
+            const isScrollingDown = scrollTop > this.lastScrollTop;
+            const isScrollingUp = scrollTop < this.lastScrollTop;
+
+            // Smart button logic:
+            // - At top (< 100px): show down arrow
+            // - At bottom (> 95%): show up arrow
+            // - Middle + scrolling down: show down arrow
+            // - Middle + scrolling up: show up arrow
+
+            const isAtTop = scrollTop < 100;
+            const isAtBottom = this.scrollProgress > 95;
+            const isInMiddle = !isAtTop && !isAtBottom;
+
+            if (isAtTop) {
+                this.scrollDirection = 'down';
+                this.showButton = true;
+            } else if (isAtBottom) {
+                this.scrollDirection = 'up';
+                this.showButton = true;
+            } else if (isInMiddle) {
+                this.showButton = true;
+                // Update direction based on scroll movement
+                if (isScrollingDown) {
+                    this.scrollDirection = 'down';
+                } else if (isScrollingUp) {
+                    this.scrollDirection = 'up';
+                }
+            }
+
+            this.lastScrollTop = scrollTop;
+        },
+
+        handleScroll() {
+            if (this.scrollDirection === 'up') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+            }
+        }
+    }
+}
+</script>
 </body>
 </html>
